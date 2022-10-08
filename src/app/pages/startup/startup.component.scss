@@ -18,20 +18,20 @@
     align-self: center;
     justify-self: center;
     font-size: 3.6rem;
-    color: #000;
     width: 95%;
     min-height: 100%;
     padding-top: 70px;
+    color: #000;
 }
 
 .border {
-    background: rgb(255,0,0);
     height: 25px !important;
     min-height: 25px;
     width: 100%;
-    background: linear-gradient(90deg, rgba(215,82,75,1) 0%, rgba(215,82,75,1) 8%, rgba(90,222,123,1) 8%, rgba(90,222,123,1) 16%, rgba(0,0,0,1) 16%, rgba(0,0,0,1) 24%, rgba(232,206,132,1) 24%, rgba(232,206,132,1) 32%, rgb(22, 218, 54) 32%, rgb(22, 218, 54) 41%, rgba(206,90,189,1) 41%, rgba(206,90,189,1) 50%, rgba(209,206,206,1) 50%, rgba(209,206,206,1) 59%, rgba(82,82,238,1) 59%, rgba(82,82,238,1) 68%, rgba(33,206,65,1) 68%, rgba(33,206,65,1) 79%, rgba(221,208,111,1) 79%, rgba(227,216,135,1) 90%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 93%, rgba(255,255,255,1) 96%, rgba(255,255,255,1) 100%);  
-    border: #000 solid 2px;
     margin: 15px 0px;
+    background: linear-gradient(90deg, rgba(215,82,75,1) 0%, rgba(215,82,75,1) 8%, rgba(90,222,123,1) 8%, rgba(90,222,123,1) 16%, rgba(0,0,0,1) 16%, rgba(0,0,0,1) 24%, rgba(232,206,132,1) 24%, rgba(232,206,132,1) 32%, rgb(22, 218, 54) 32%, rgb(22, 218, 54) 41%, rgba(206,90,189,1) 41%, rgba(206,90,189,1) 50%, rgba(209,206,206,1) 50%, rgba(209,206,206,1) 59%, rgba(82,82,238,1) 59%, rgba(82,82,238,1) 68%, rgba(33,206,65,1) 68%, rgba(33,206,65,1) 79%, rgba(221,208,111,1) 79%, rgba(227,216,135,1) 90%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 93%, rgba(255,255,255,1) 96%, rgba(255,255,255,1) 100%);  
+    border: #000 solid 2px; 
+    background: rgb(255,0,0);   
 }
 
 .intro {
@@ -48,11 +48,11 @@
     margin: 0 auto;
     width: 135px;
     height: 135px;
-    background-color: rgb(231, 231, 231);
     border-radius: 50%;
-    border: #000 solid 2px;
     -webkit-box-shadow: inset 0px 0px 15px 11px rgba(0,0,0,0.34); 
-    box-shadow: inset 0px 0px 15px 11px rgba(0,0,0,0.34);    
+    box-shadow: inset 0px 0px 15px 11px rgba(0,0,0,0.34); 
+    border: #000 solid 2px; 
+    background-color: rgb(231, 231, 231); 
 }
 
 .spacer {

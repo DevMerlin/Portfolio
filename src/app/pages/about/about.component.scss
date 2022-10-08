@@ -13,11 +13,10 @@
 .skillblock {
     display: flex;
     flex-direction: column;
-    background: rgb(237, 237, 237);
     border-radius: 5px;
     padding: 5px;
     border: #000 solid 2px;
-
+    background: rgb(237, 237, 237);
     .bar {
         display: flex;
         flex-direction: row;

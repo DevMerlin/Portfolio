@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
   {
     this.renderer.listen('window', 'click',(e:Event)=>{
         let el: any = e.target;
-        let panelCheck = el.closest(".panel");
+        let panelCheck = el.closest(".toggleSwitch");
         let menuCheck = el.closest(".menu") || el.closest(".menuslot");
 
         if ((panelCheck === null && menuCheck === null) && this.showMenu)

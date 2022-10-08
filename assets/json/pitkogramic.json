@@ -1,0 +1,15 @@
+{
+	"Name": "Piktogramic",
+	"Desc": "Pitkogramic.md",
+	"Media": {
+		"Display": {
+			"Hero": "",
+			"HeroType": "Image",
+			"HeroWidth": "400px",
+			"ExtraType": "Gallery",
+			"Source": [
+
+			]
+		}
+	}
+}

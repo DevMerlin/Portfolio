@@ -1,0 +1,29 @@
+.sheader {
+    width: 100%;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.skillbody {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.skillblock {
+    display: flex;
+    flex-direction: column;
+    background: rgb(237, 237, 237);
+    border-radius: 5px;
+    padding: 5px;
+    border: #000 solid 2px;
+
+    .bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3px 10px;
+        padding: 1px 10px;
+        border: #000 solid 1px;
+    }
+}

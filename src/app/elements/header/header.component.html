@@ -1,0 +1,20 @@
+<div class="menu" data-menu *ngIf="showMenu">
+    <nav class="sys" #menu>
+        <ul>
+            <li class="main"><a #entry (click)="onClick()" class="entry">System</a></li>
+            <ul class="sub" #dropdown>
+                <li (click)="navigate(1)"><a >Welcome</a></li>
+                <li (click)="navigate(2)"><a >Skills</a></li>
+                <li (click)="navigate(3)"><a >Projects</a></li>
+                <li (click)="navigate(4)"><a >Contact</a></li>
+            </ul>
+        </ul>
+    </nav> 
+    <div class="timeset">
+        <div class="time">8:09 PM</div>
+        <div class="icon active"  (click)="setMenuVisibility()"><fa-icon [icon]="barIcon"></fa-icon></div>
+    </div>
+</div>
+<div class="menuslot" *ngIf="!showMenu">
+    <div class="icon" #toggleButton (click)="setMenuVisibility()"><fa-icon [icon]="barIcon"></fa-icon></div>
+</div>

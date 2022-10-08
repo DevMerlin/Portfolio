@@ -1,0 +1,60 @@
+<div class="pcont">
+    <div class="title">FuseEngine</div>
+    <div class="hero">
+        <iframe 
+            class="heroimg" 
+            src="https://www.youtube.com/embed/h07f7Z6EMXw" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="clipboard-write; encrypted-media; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="about">
+        <h2 class="ph2 center">8-bit pixel engine for Unity</h2>
+        <div class="text">
+            <p>
+
+            </p>
+            <h2 class="ph2">About</h2>
+            <p class="pspc">
+                FuseEngine - A dynamic drawing engine. It draws directly to a single texture, 
+                simulating a PICO or Javascript-like system with a application-loop style, 
+                outside of Unity's object-based environment.
+            </p>  
+            <p>  
+                Built to create small games and applications within Unity, FuseEngine is equivilant 
+                currently to early DOS level systems, or NES games. Three demo games show off 
+                it's capability - and much more is possible within it. It can create anything from a handheld game
+                system to consoles or computers, or unique control panels within games that have their own functions.
+            </p>
+            <h2 class="ph2">Research</h2> 
+            <p>
+                Originally spun off an app named Fuse Bead Simulator, FuseEngine came from the way that FBS lays
+                out the bead patterns. While building Fuse Bead Simulator, I wanted to add additional mini-games
+                to it that looked like they were drawn in beads.
+            </p>    
+ 
+            <p>
+                This actually did prove feasible. However, it also didn't really work out exactly the way that had been planned, 
+                with mini-games being displayed on a bead screen. The primary problem was that it could only do a "resolution" of up
+                 to 64x64 max, before the entire screen started to slow down - due to each bead being an object.
+            </p>
+            
+           
+            <p>
+                In order to solve the issue and generate higher resolutions, additional methods were researched to emulate the look
+                and feel of beads but keeping the rendering requirements low. I settled on taking the array that handled the beads,
+                reducing it down to the basics - a "Color[]" array, and then rendering it out to a texture. 
+                A secondary texture was placed on top to imitate the look of the beads.
+            </p>
+           
+            <p>
+                This resulted in the tool that became Fuse Engine, especially after adding additional methods that calculated things
+                like collision and interaction - as well as drawing various specific shapes, and even sprites.
+            </p>
+                       
+        </div>
+
+    </div>
+</div>

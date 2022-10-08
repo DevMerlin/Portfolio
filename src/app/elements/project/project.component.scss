@@ -1,0 +1,95 @@
+.project {
+    display: block;
+    flex-direction: column;
+    position: relative;
+    width: 180px;
+    margin: 0px 10px;
+
+    .title {
+      display: block;
+      width: 100%;
+      padding: 2px;
+      text-align: center;
+      font-size: 1.15rem;
+    }
+
+    .hero {
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: #000 solid 2px;
+    }
+
+    .github {
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      justify-content: space-between;
+      position: absolute;
+      bottom: -15px;
+      width: 100%;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      z-index: 50;
+
+      .icowrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;       
+      }
+
+      .icowcent {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin: 0 auto;        
+      }
+
+      .gico {
+        padding: 2px;
+        margin: 2px;
+      }
+
+      .lico {
+        padding: 2px;
+        margin: 2px;
+      }
+
+      .link {
+        background: #FFF;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 5px;
+
+        &:hover {
+          background: rgb(146, 146, 146);
+        }
+      }
+
+      .sep {
+        margin-right: 15px;
+      }
+
+      a {
+        color: #000;
+
+        &:visited {
+          color: rgb(62, 62, 62);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .project {
+        width: 150px;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .project {
+        width: 120px;
+    }
+  }  

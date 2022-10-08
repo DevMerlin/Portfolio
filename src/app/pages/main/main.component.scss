@@ -1,0 +1,123 @@
+:host {
+    color: #000;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 20px;
+    flex: 1;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.columngroup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .group {
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        text-align: center;
+        border: rgb(0, 18, 108) 4px solid;
+        border-radius: 8px;
+        padding-bottom: 5px;
+        margin: 5px;
+    }
+
+    .header {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.aboutStart {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 90%;
+    font-size: 26px;
+
+    .name {
+        font-size: 55px;
+        text-align: left;
+        font-family: 'VT323', monospace !important;
+    }
+
+    .fed {
+        font-size: 35px;
+        text-align: left;
+    }
+}
+
+.gotoNext {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    .jumpTo {
+        border: rgb(0, 18, 108) 4px solid;
+        border-radius: 8px;
+        width: 90%;
+
+        padding: 10px;
+        background: rgba(228, 228, 228, 0.862);
+    }
+}
+
+.menublock {
+    line-height: 1.7;
+    width: 100%;
+
+    li {
+        display: inline-block;
+        
+        a {
+            margin: 10px;
+            padding: 4px 10px;
+            background: rgb(179, 179, 179);
+            color: rgb(24, 24, 24);
+            border: rgb(62, 62, 62) solid 2px;
+            text-decoration: none;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 420px) {
+
+    .welcome {
+        min-height: 210px;
+    }
+
+    .aboutStart {
+        font-size: 26px;
+    
+        .name {
+            font-size: 42px;
+        }
+    
+        .fed {
+            font-size: 25px;
+        }
+    }
+    .gotoNext {
+        font-size: 22px;
+    }
+
+    .columngroup {
+        flex-direction: column;
+
+        .group {
+            width: 100%;
+        }        
+    }
+}

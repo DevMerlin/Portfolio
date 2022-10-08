@@ -1,1 +1,422 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('./normalize.scss');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+* { 
+    scroll-behavior: smooth;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+$backwallDefault: #5d4d79;
+$floorLine: #50170b;
+$height: 100%;
+
+html, body {
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace !important;
+    overflow: hidden;
+    color: #212121;
+    background: $backwallDefault;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: 1.25rem !important;
+    line-height: 1.15 !important;
+}
+
+.h1 {
+    font-family: 'VT323', monospace !important;
+    font-size: 2.45rem !important;
+    margin: 4px;
+}
+
+.h2 {
+    font-family: 'VT323', monospace !important;
+    font-size: 1.75rem !important;
+    margin: 4px;
+}
+
+.ph2 {
+    font-family: 'VT323', monospace !important;
+    font-size: 1.45rem !important;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px  !important;           
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    z-index: 1;
+}
+
+
+
+.monitor-container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    max-width: 825px;
+    overflow: hidden;
+    z-index: 4;
+    transition: all linear 1s;
+
+    .top {
+        position: relative;
+        margin: 0 auto;
+        top: 10px;
+        width: 95%;
+        height: 30px;
+        background: rgb(134, 134, 134);
+        border: #000 solid 1px;
+        border-radius: 15px;
+        z-index: 1;
+        transform: perspective(120px) rotateX(45deg);
+    }  
+
+
+    .monitor {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        background: rgb(79, 79, 79);
+        
+        align-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 5;
+
+
+
+        .screen-block {
+            position: relative;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;        
+            flex-direction: column;        
+            width: 95%;
+            height: 80%;
+            background: rgb(54,54,54);
+            background: radial-gradient(circle, rgba(54,54,54,1) 82%, rgba(75,74,74,1) 87%, rgba(48,48,48,1) 90%, rgba(28,28,28,1) 100%); 
+            border-bottom: #696969 solid 2px;
+            border-radius: 15px;
+            margin: 10px;
+            z-index: 6;
+
+    
+            .display {
+                position: absolute;
+                display: inline-block;
+                width: 98%;
+                height: 98%;
+                border: #131313 solid 4px;
+                border-radius: 20px;
+
+                .screenActive {
+                    display: block;
+                    width: 100%;
+                    min-height: 100%;
+                    padding: 10px;
+                    animation: 2s linear FadeIn;
+                }
+            }
+
+            .divadv {
+                border-radius: 5px;
+                border: #000 solid 1px;
+                pointer-events: none;
+                z-index: 20;
+            }
+
+            .disback {
+                background: rgb(54,54,54);
+                background: radial-gradient(circle, rgba(54,54,54,1) 0%, rgba(75,74,74,1) 44%, rgba(48,48,48,1) 90%, rgba(28,28,28,1) 100%); 
+            }
+
+            .discol {
+                background: #42f0f6c9; 
+            }
+
+            .disf {
+                z-index: 5;
+            }
+
+            .hideScroll {
+                overflow: hidden;
+            }
+
+            .showScroll {
+                overflow: hidden;
+                overflow-y: scroll;
+            }
+        }
+
+        .sbover {
+            width: 95%;
+            height: 80%;
+            background: rgb(54,54,54);
+            background: radial-gradient(circle, rgba(54,54,54,1) 82%, rgba(75,74,74,1) 87%, rgba(48,48,48,1) 90%, rgba(28,28,28,1) 100%); 
+        }
+    
+        .bottom 
+        {
+            width: 100%;
+            height: 110px;
+            background: #353535;
+            border-top: rgb(62, 62, 62) 1px solid;
+            border: rgb(41, 41, 41) 3px solid;
+
+            .controls {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                height: 100%;
+
+                .cartridge {
+                    display: block;
+                    width: 65%;
+                    padding: 4px;
+                    margin-top: 15px;
+                    margin: 10px;
+                    height: 45px;
+                    background: rgb(70,70,70);
+                    background: linear-gradient(180deg, rgba(70,70,70,1) 0%, rgba(46,46,46,1) 5%, rgba(60,60,60,1) 14%, rgba(56,56,56,1) 20%, rgba(36,36,36,1) 84%, rgba(19,19,19,1) 93%, rgba(77,77,77,1) 100%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);    
+                    border: rgb(79, 79, 79) solid 2px;
+                }
+
+                .block {
+                    width: 80%;
+                    height: 100%;
+                    background: #353535;
+                    border-right: #000 solid 2px;
+                    border-left: #000 solid 2px;
+                }
+                
+                .PowerButton {
+                    display: flex;
+                    width: 180px;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden; 
+
+                    .knob {
+                        position: relative;
+                        display: block;
+                        width: 45px;
+                        height: 45px;
+                        margin-right: 8px;                        
+                    }
+                    
+                    .volume-knob{
+                        // cursor: pointer;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        position: absolute;
+                        background: black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            width: 4px;
+                            height: 5px;
+                            left: 50%;
+                            top: 2px;
+                            transform: translateX(-50%);
+                            background: #303030;
+                            box-shadow: 0 0 1px .5px #333333;
+                            border-radius: .5px;
+                        }
+                        .knob-inner1{
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            border: 1px dotted rgb(70, 70, 70);
+                            background: rgb(126,118,118);
+                            background: radial-gradient(circle, rgba(126,118,118,1) 0%, rgba(203,201,201,1) 62%, rgba(0,0,0,1) 63%, rgba(163,162,162,1) 65%, rgba(127,120,120,1) 100%);                            
+                        }
+                        .knob-inner2{
+                            width: 32px;
+                            height: 32px;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%);
+                            box-shadow: 0 -.5px 0 .5px rgb(77, 76, 76), 0 0 0 2px #808487, 0 0 0 1.5px #343434;
+                        }
+                    }
+
+                    .panel {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        background-color: #8a8a8a;
+                        border-style: solid;
+                        overflow: hidden;
+                        align-items: center;
+                        
+                        
+                        input {
+                            display: none;
+                        }
+                    
+                        // Switch
+                        label {
+                            display: flex;
+                            overflow: hidden;
+                            justify-content: center;
+                            width: 45px;
+                            height: 4.2rem;
+                            cursor: pointer;
+                            transition: all 0.1s;
+                            border-radius: 2px;
+                            overflow: hidden;
+
+                    
+                            &::before,
+                            &::after {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                overflow: hidden;
+                            }
+                    
+                            // Flicker
+                            &::before {
+                                transition: all 0.2s;
+                                width: 55%;
+                                top: 0.24rem;
+                                height: 2.2rem;
+                                background-color: #888888;
+                                border-style: solid;
+                                box-shadow: 0px 35px 0px 0px #61616195;
+                                border-width: 0.055rem 2px 1.8rem 2px;
+                                border-color: #5d5d5d #909090 #b1b1b1 #909090;
+                                z-index: 1;
+                            }
+                    
+                            // Text
+                            &::after {
+                                transition: bottom .2s;
+                                content: 'ON';
+                                bottom: 4.74rem;
+                                transform: translateY(90px);
+                                color: #000;
+                                z-index: 3;
+                                opacity: 0.75;
+                            }
+                        }
+                    
+                        #switch:checked {
+                            // Panel OFF
+                            & ~ label {
+                                background-color: #4e4e4e;
+                                border-color: #4e4e4e44 #646464;
+                    
+                                // Flicker OFF
+                                &::before {
+                                    top: 1.55rem;
+                                    box-shadow: 0px 0px 5px 0px #00000033;
+                                    border-width: 1.8rem 2px 0.05rem 2px;
+                                }
+
+                                // Text OFF
+                                &::after {
+                                    content: 'Menu';
+                                    bottom: 0.15rem;
+                                    color: #000;
+                                    z-index: 5;
+                                    opacity: 1;
+                                    text-shadow: none;
+                                    transform: translateY(-50px);
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+
+
+
+
+
+
+                }                
+            }
+
+        }
+    }
+}
+
+.background-wall {
+    position:absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,84,255);
+    background:repeating-linear-gradient(to right, $backwallDefault 0%, $backwallDefault 3%, darken($backwallDefault, 5%) 3%, darken($backwallDefault, 5%) 6%);
+    z-index: 0;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.ndiv {
+    padding: 2px;
+}
+
+@media only screen and (max-width: 650px) {
+    .monitor-container {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pcont {
+        width: 95% !important;
+        margin: 0px auto !important;
+        text-align: justify;
+    }
+
+    .contactbody {
+        width: 95% !important;
+        margin: 0px auto !important;
+        padding: 2px !important;        
+    }
+
+    .contact {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .qmsg {
+        width: 100% !important;
+    }
+}

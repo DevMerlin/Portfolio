@@ -1,0 +1,55 @@
+.pcont {
+    width: 80%;
+    margin: 0 auto;
+
+    .title {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 2rem;
+    }
+
+    .ph1 {
+        font-family: 'VT323', monospace !important;
+        font-size: 2.25rem !important;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;        
+    }
+
+
+
+    .pspc {
+        margin-top: 1px;
+    }
+
+    .hero {
+        display: flex;
+        align-content: center;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .heroimg {
+        width: 300px;
+        margin: 0 auto;
+        height: auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .about {
+        margin-top: 10px;
+        width: 100%;
+
+        .center {
+            margin: 0 auto !important;
+            margin-bottom: 10px;
+        }
+    }
+
+    .text {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="project">
+    <div class="title">{{title}}</div>
+    <a [routerLink]="[link, param]" *ngIf="!showGit"><img class="hero" src={{src}}></a>
+    <a href={{link}} target="_blank" *ngIf="showGit"><img class="hero" src={{src}}></a>
+    <div class="github">
+        <div class="icowrapper" *ngIf="showGit">
+            <a href={{github}} target="_blank" class="gico link"><fa-icon [icon]="git"></fa-icon></a>
+            <a href={{link}} target="_blank" class="lico link"><fa-icon [icon]="flink"></fa-icon></a>
+        </div>
+        <div class="icowcent" *ngIf="!showGit">
+            <a [routerLink]="[link, param]" class="link sep">About</a>
+            <a href={{path}} target="_blank" class="link"><fa-icon [icon]="flink"></fa-icon></a>
+        </div>
+    </div>   
+</div>

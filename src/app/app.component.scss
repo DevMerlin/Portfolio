@@ -1,0 +1,70 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.header {
+    position: absolute;
+}
+
+.headerTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.viewOutside {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 63%;
+    width: 400px;
+    height: 400px;
+    background: rgb(200, 200, 200);
+    -webkit-box-shadow: inset 0 0 12px 8px #626262;
+    box-shadow: inset 0 0 12px 8px #8a8a8a;
+    border: #000 solid 2px;
+    z-index: 3;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    .innerBlock {
+        display: flex;
+        width: 92%;
+        height: 92%;
+        background: rgb(135, 207, 243);
+        border: rgb(31, 31, 31) solid 2px;
+        align-items: center;
+        justify-content: center;        
+    }
+
+    &:after {
+        z-index: 5;
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 92.05%;
+        background: #959595;
+        border-left: #000 solid 2px;
+        border-right: #000 solid 2px;
+        left: 50%;
+        top: 16px;
+      }
+      
+      &:before {
+        z-index: 5;
+        content: '';
+        position: absolute;
+        width: 96%;
+        height: 25px;
+        background: #7d7d7d;
+        border-top: #000 solid 2px;
+        border-bottom: #000 solid 2px;        
+        left: 0;
+        top: 50%;
+      }
+}
+

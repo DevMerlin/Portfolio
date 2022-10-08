@@ -17,6 +17,7 @@ export class ProjectComponent implements OnInit {
   @Input() showGit: boolean = false;
   @Input() param: string = "";
   @Input() path: string = "";
+  @Input() alt: string = "Active Project";
 
   git = faGithubAlt;
   flink = faLink;

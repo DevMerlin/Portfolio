@@ -130,6 +130,8 @@ html, body {
                 height: 98%;
                 border: #131313 solid 4px;
                 border-radius: 20px;
+            
+
 
                 .screenActive {
                     display: block;
@@ -137,6 +139,8 @@ html, body {
                     min-height: 100%;
                     padding: 10px;
                     animation: 2s linear FadeIn;
+                    transform: translate3d(0, 0, 0);
+                    -webkit-transform: translate3d(0, 0, 0);                    
                 }
             }
 
@@ -144,7 +148,9 @@ html, body {
                 border-radius: 5px;
                 border: #000 solid 1px;
                 pointer-events: none;
-                z-index: 20;
+                z-index: 50;
+                transform: translate3d(0, 0, 0);
+                -webkit-transform: translate3d(0, 0, 0);
             }
 
             .disback {
@@ -227,7 +233,6 @@ html, body {
                     }
                     
                     .volume-knob{
-                        // cursor: pointer;
                         width: 45px;
                         height: 45px;
                         border-radius: 50%;
@@ -248,7 +253,7 @@ html, body {
                             box-shadow: 0 0 1px .5px #333333;
                             border-radius: .5px;
                         }
-                        .knob-inner1{
+                        .knob-inner {
                             width: 45px;
                             height: 45px;
                             border-radius: 50%;
@@ -256,7 +261,7 @@ html, body {
                             background: rgb(126,118,118);
                             background: radial-gradient(circle, rgba(126,118,118,1) 0%, rgba(203,201,201,1) 62%, rgba(0,0,0,1) 63%, rgba(163,162,162,1) 65%, rgba(127,120,120,1) 100%);                            
                         }
-                        .knob-inner2{
+                        .knob-fill {
                             width: 32px;
                             height: 32px;
                             position: absolute;
@@ -355,16 +360,6 @@ html, body {
                             }
                         }
                     }
-
-
-
-
-
-
-
-
-
-
                 }                
             }
 
@@ -391,6 +386,31 @@ html, body {
 .ndiv {
     padding: 2px;
 }
+
+ /* width */
+ ::-webkit-scrollbar {
+    width: 3px !important;
+    border-radius: 2px !important;
+    height: 80% !important;
+    z-index: 1 !important;
+  }
+
+::-webkit-scrollbar-track {
+    background: #ffffff00 !important;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px !important;
+    height: 80% !important;
+    z-index: 1 !important;
+}
+  
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 
 
 @media only screen and (max-width: 650px) {
     .monitor-container {

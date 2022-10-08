@@ -22,16 +22,16 @@
           <div class="cartridge"></div>
           <div class="block"></div>
           <div class="PowerButton">
-            <section class="knob">
+            <div class="knob">
               <div id="volume" class="volume-knob">
-                <div class="knob-inner1"></div>
-                <div class="knob-inner2"></div>
+                <div class="knob-inner"></div>
+                <div class="knob-fill"></div>
               </div>
-            </section>               
-            <section #toggleSwitch class="panel">
+            </div>               
+            <div #toggleSwitch class="panel">
               <input (click)="openMenu()" [(ngModel)]="switchOff" id="switch" type="checkbox" />
               <label for="switch"></label>
-            </section>
+            </div>
          
           </div>
         </div>

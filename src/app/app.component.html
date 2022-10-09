@@ -1,15 +1,21 @@
 <main class="wrapper">
-  <div class="viewOutside">
+  <div class="window">
     <div class="innerBlock">
+
+      <div class="weatherLayer" [ngClass]="dayEffect">
+        <div class="sky">
+        
+        </div>        
+      </div>
     </div>
   </div>
   <div class="monitor-container">
     <div class="top"></div>
     <div class="monitor">
-      <div  class="screen-block disback">
+      <div  class="screen-outer disback">
         
         <div #ScrollDisplay (wheel)="onWheel($event)" id="ScrollDisplay" class="display discol" [ngClass]="showScroll ? 'showScroll' : 'hideScroll'">
-          <div id="activeView" [@routeAnimations]="animationData()" class="screenActive">  
+          <div id="activeView" [@routeAnimations]="animationData()" class="screen-inner">  
             <router-outlet></router-outlet> 
           </div>
         </div> 

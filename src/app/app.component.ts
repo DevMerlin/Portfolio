@@ -29,6 +29,9 @@ export class AppComponent implements OnInit {
   maxPage: number = 6;
   countScrolls: number = 0;
 
+  dayEffect: string = "day-clear";
+  timeZone: string = "America/New_York";
+
   ScrollCheck!: Subscription;
   MenuCheck!: Subscription;
   pageCheck!: Subscription;
@@ -49,6 +52,28 @@ export class AppComponent implements OnInit {
   animationData()
   {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  }
+
+  getPhaseOfDay()
+  {
+    let initDate = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+    let date = new Date(initDate);
+    let hours = date.getHours();
+
+    let output = 0;
+
+    if (hours < 12)
+    {
+      output = 1; // Morning;
+    } else if (hours >= 12 && hours <= 15) {
+      output = 2; // Afternoon
+    } else if (hours >= 15 && hours <= 17) {
+      output = 3; // Evening
+    } else if (hours >= 17 && hours <= 24) {
+      output = 4; // Night
+    }
+
+    return output;
   }
 
   scrolled(e: any)
@@ -93,7 +118,21 @@ export class AppComponent implements OnInit {
     this.MenuCheck = this.data.MenuState.subscribe((set: boolean) => {
       this.switchOff = !set;
       this.menuState = set;
-    })
+    });
+
+    let dayPhase = this.getPhaseOfDay();
+
+    switch(dayPhase)
+    {
+      case 1:
+      case 2:
+      case 3:
+        this.dayEffect = "day-clear";
+      break;
+      case 4:
+        this.dayEffect = "night-clear";
+      break;
+    }
   }
 
   onWheel(e: WheelEvent) {

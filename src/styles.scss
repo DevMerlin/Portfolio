@@ -96,7 +96,7 @@ html, body {
         overflow: hidden;
         z-index: 5;
 
-        .screen-block {
+        .screen-outer {
             position: relative;
             display: flex;
             align-content: center;
@@ -120,7 +120,7 @@ html, body {
                 border: #131313 solid 4px;
                 border-radius: 20px;
             
-                .screenActive {
+                .screen-inner {
                     display: block;
                     width: 100%;
                     min-height: 100%;

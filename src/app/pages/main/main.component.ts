@@ -11,8 +11,6 @@ export class MainComponent implements OnInit {
   constructor(private data: DatahandlerService) { }
 
   ngOnInit(): void {
-    this.data.SetScrollState(true);
-    this.data.SetCurrentPage(1);
     this.data.SetAsMain(true);
   }
 

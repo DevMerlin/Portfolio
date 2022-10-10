@@ -23,9 +23,7 @@ export class StartupComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.data.SetScrollState(false);
     this.data.SetAsMain(true);
-    this.data.SetCurrentPage(0);
   }
 
   ngAfterViewInit()
@@ -53,7 +51,6 @@ export class StartupComponent implements OnInit {
   navHome()
   {
     this.router.navigate(['main']);
-    this.data.SetScrollState(true);
   }
 
   ngOnDestroy()

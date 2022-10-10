@@ -3,14 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule  } from '@angular/common/http';
 import { StartupComponent } from './pages/startup/startup.component';
-import { HeaderComponent } from './elements/header/header.component'; 
 import { RouterModule } from '@angular/router';
 import { MainComponent } from './pages/main/main.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { ProjectComponent } from './elements/project/project.component';
@@ -22,11 +17,7 @@ import { FuseengineComponent } from './projects/fuseengine/fuseengine.component'
   declarations: [
     AppComponent,
     StartupComponent,
-    HeaderComponent,
     MainComponent,
-    ProjectsComponent,
-    AboutComponent,
-    ContactComponent,
     ProjectComponent,
     PiktogramicComponent,
     PacketpopComponent,
@@ -37,7 +28,6 @@ import { FuseengineComponent } from './projects/fuseengine/fuseengine.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule,
-    HttpClientModule,
     FontAwesomeModule,
     FormsModule
   ],

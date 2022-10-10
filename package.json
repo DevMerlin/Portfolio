@@ -6,7 +6,7 @@
     "start": "ng serve --open",
     "build": "ng build",
     "server": "ng serve --open --host 0.0.0.0 --disable-host-check",
-    "remote": "ng deploy --base-href=/Portfolio/",
+    "remote": "ng deploy --base-href=/portfolio/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

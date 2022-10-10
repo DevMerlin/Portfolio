@@ -52,7 +52,7 @@ export class StartupComponent implements OnInit {
 
   navHome()
   {
-    this.router.navigate(['about']);
+    this.router.navigate(['main']);
     this.data.SetScrollState(true);
   }
 

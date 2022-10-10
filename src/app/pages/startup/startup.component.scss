@@ -1,31 +1,22 @@
 :host {
     display: flex;
     flex-direction: column;
-    width: 100%;
     flex-grow: 1;
-    flex-shrink: 1;
     justify-content: center;
-    align-items: center;
-    align-self: center;
-    justify-self: center;    
+    align-items: center;  
+    align-self: stretch;
+    flex-basis: 90%;
 }
 
 .display-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    justify-self: center;
-    font-size: 3.6rem;
-    width: 95%;
-    min-height: 100%;
-    padding-top: 70px;
+    font-size: 2.75rem;
     color: #000;
 }
 
 .colorbar {
-    height: 25px !important;
+    height: 25px;
     min-height: 25px;
     width: 100%;
     margin: 15px 0px;
@@ -53,6 +44,14 @@
     box-shadow: inset 0px 0px 15px 11px rgba(0,0,0,0.34); 
     border: #000 solid 2px; 
     background-color: rgb(231, 231, 231); 
+}
+
+.arrow {
+    display: block;
+    cursor: pointer;
+    width: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .spacer {
@@ -95,15 +94,6 @@
 }
 
 @media only screen and (max-width: 340px) {
-    .display-body {
-        font-size: 1.8rem;
-        padding-top: 15px !important;
-    }
-
-    .circle {
-        width: 65px;
-        height: 65px;    
-    }    
 
     .border {
         margin-top: 0px;

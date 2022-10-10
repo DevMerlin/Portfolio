@@ -2,10 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './pages/main/main.component';
 import { StartupComponent } from './pages/startup/startup.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { AboutComponent } from './pages/about/about.component';
-import { GalleryComponent } from './pages/gallery/gallery.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { PiktogramicComponent } from './projects/piktogramic/piktogramic.component';
 import { FuseengineComponent } from './projects/fuseengine/fuseengine.component';
 import { PacketpopComponent } from './projects/packetpop/packetpop.component';
@@ -15,19 +11,9 @@ const routes: Routes = [
     component: StartupComponent,
     data: { animation: 'LandingPage' }
    },
-  { path: 'about',
+  { path: 'main',
     component: MainComponent,
     data: { animation: 'MainPage' }
-  },
-  {
-    path: 'projects',
-    component: ProjectsComponent,
-    data: { animation: 'Projects' }
-  },
-  {
-    path: 'skills',
-    component: AboutComponent,
-    data: { animation: 'skills' }
   },
   {
     path: 'viewer/piktogramic',
@@ -46,11 +32,6 @@ const routes: Routes = [
     component: PacketpopComponent,
     data: { animation: 'viewer' }
 
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-    data: { animation: 'Contact' }
   },
   { path: '**', redirectTo: '' }
 ];

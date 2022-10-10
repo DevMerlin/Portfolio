@@ -13,7 +13,6 @@ export class FuseengineComponent implements OnInit {
   constructor(private data: DatahandlerService) { }
 
   ngOnInit(): void {
-    this.data.SetScrollState(true);
     this.data.SetAsMain(false);        
   }
 

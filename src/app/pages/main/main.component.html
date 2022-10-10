@@ -1,22 +1,23 @@
 <div class="pagegroup">
     <div class="welcome">
-        <div class="aboutStart">
-            <h1 class="name">Welcome!</h1><br>
+        <div class="textGroup">
+            <h1 class="h1">Welcome!</h1><br>
             <p> My name is Merlin. Of course, there's no relation to the wizard. 
                 I prefer to bring things to life through software over magic! 
                 <br><br>
             </p>
         </div>
-        <div class="aboutStart">
+        <div class="textGroup">
             <h2 class="ph2">What do I do?</h2>
-            <p>Primarily, I'm a Front End Developer - but also a bit of a designer, and game dev.</p>
+            <p>Primarily, I'm a Front End Developer - but also a bit of a designer.</p>
             <div class="columngroup">
                 <div class="group">
                     <h2 class="ph2 header">Front End</h2>
                     <span>JavaScript</span>
                     <span>TypeScript</span>
                     <span>HTML / CSS</span>
-                    <span>Node</span>                    
+                    <span>Node</span> 
+                    <span>C#</span>                       
                 </div>                
                 <div class="group">
                     <h2 class="ph2 header">Designer</h2>
@@ -24,25 +25,85 @@
                     <span>Photoshop CC</span>
                     <span>Figma</span>
                     <span>Adobe XD</span>
-                </div>   
-                <div class="group">
-                    <h2 class="ph2 header">Game Dev</h2>
-                    <span>Unity</span>
-                    <span>Canvas</span>
+                    <span>Unity 3D</span>
                     <span>Blender</span>
-                    <span>Animation</span>                    
-                </div>                               
+                </div>                                 
             </div>
+            <p>
+                I'm almost always working on something, developing systems using a wide
+                variety of tools and technologies.
+            </p> 
+            <div class="borderHeader" style="margin-top: 20px;">Projects</div>
+            <div class="linedown" style="height: 60px"></div>
+            <div class="projectGroup">
+                <div class="projectline">
+                    <project 
+                        [title]="'Piktogramic'" 
+                        [src]="'assets/projects/PiktogramicShotOne.png'" 
+                        [link]="'/viewer'" 
+                        [param]="'piktogramic'"
+                        [path]="'https://piktogramic.com'"
+                        [showGit]="false"
+                        [alt]="'Piktogramic'" 
+                        >
+                    </project>
+                    <project 
+                        [title]="'PacketPop'"
+                        [src]="'assets/projects/Packetpop_Game.jpg'"
+                        [link]="'/viewer'" 
+                        [param]="'packetpop'"
+                        [path]="'https://packetpop.io'"
+                        [showGit]="false"
+                        [alt]="'Packet Pop'" 
+                        >
+                    </project>
+                    <project 
+                        [title]="'FuseEngine'" 
+                        [src]="'assets/projects/FEPhoto.png'"
+                        [link]="'/viewer'" 
+                        [param]="'fuseengine'"
+                        [path]="'https://assetstore.unity.com/packages/add-ons/fuseengine-177777'"
+                        [showGit]="false"
+                        [alt]="'Fuseengine'" 
+                        >
+                    </project>                    
+                </div>
+                <div class="projectline">
+                    <project 
+                        [title]="'Rock Paper Scissors'" 
+                        [src]="'assets/projects/Rock_Paper_Scissors.png'"
+                        [showGit]="true"
+                        [github]="'https://github.com/DevMerlin/Frontend-Mentor-RPS'"
+                        [link]="'https://spectacular-rolypoly-85b075.netlify.app/normal'"
+                        [alt]="'Rock Paper Scissors'" 
+                        >
+                    </project>    
+                    <project 
+                    [title]="'Message Widget'" 
+                    [src]="'assets/projects/MessageCenterWidget.png'"
+                    [showGit]="true"
+                    [github]="'https://github.com/DevMerlin/Notifications---Frontend-Mentor'"
+                    [link]="'https://bejewelled-mochi-d3730e.netlify.app/'" 
+                    [alt]="'Message Widget'"           
+                    ></project>  
+                </div>              
+            </div>
+            <div class="linedown" style="height: 180px"></div>
+            <div class="borderHeader">Contact</div>
+            <div class="contactBlock">
+                <div class="contact"><h1 class="h1">Get in Touch?</h1></div>
+                <div class="qmsg">
+                    <p>I'm primarily reachable via LinkedIn and Email.</p>
+                    <p>If you'd like to get in touch with me, click one of these two buttons!</p>
+                </div>
+            
+                <a target="_blank" href="https://www.linkedin.com/in/devmerlin/" class="cbtn">LinkedIn</a>
+                <a href="mailto: dev.merlin@gmail.com" class="cbtn">Email</a>
+            </div>
+
+
+
         </div>        
         
-    </div>
-        <div class="gotoNext">
-            <div class="jumpTo">
-            <ul class="menublock">
-                <li><a routerLink="/skills">1: Skills</a></li>
-                <li><a routerLink="/projects" href="">2: Projects</a></li>
-                <li><a routerLink="/contact">3: Contact</a></li>
-            </ul>
-            </div>
     </div>
 </div>

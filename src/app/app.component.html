@@ -1,7 +1,6 @@
 <main class="wrapper">
   <div class="window">
     <div class="innerBlock">
-
       <div class="weatherLayer" [ngClass]="dayEffect">
         <div class="sky">
         
@@ -10,37 +9,33 @@
     </div>
   </div>
   <div class="monitor-container">
-    <div class="top"></div>
     <div class="monitor">
-      <div  class="screen-outer disback">
-        
-        <div #ScrollDisplay (wheel)="onWheel($event)" id="ScrollDisplay" class="display discol" [ngClass]="showScroll ? 'showScroll' : 'hideScroll'">
-          <div id="activeView" [@routeAnimations]="animationData()" class="screen-inner">  
-            <router-outlet></router-outlet> 
-          </div>
-        </div> 
-        <div class="display divadv">
-          <app-header></app-header>
-        </div>             
-      </div>
-      <div class="bottom">
-        <div class="controls">
-          <div class="cartridge"></div>
-          <div class="block"></div>
-          <div class="vkParent">
-            <div class="knob">
-              <div id="volume" class="volume-knob">
-                <div class="knob-inner"></div>
-                <div class="knob-fill"></div>
+      <div class="top"></div>
+      <div class="shell">
+        <div  class="screen-outer">
+          
+          <div #ScrollDisplay id="ScrollDisplay" class="display discol showScroll">
+            <div id="activeView" [@routeAnimations]="animationData()" class="screen-inner">  
+              <router-outlet></router-outlet> 
+            </div>
+          </div>           
+        </div>
+        <div class="bottom">
+          <div class="controls">
+            <div class="cartridge"></div>
+            <div class="block"></div>
+            <div class="vkParent">
+              <div class="knob">
+                <div id="volume" class="volume-knob">
+                  <div class="knob-inner"></div>
+                  <div class="knob-fill"></div>
+                </div>
               </div>
-            </div>               
-            <div class="toggleSwitch">
-              <input (click)="openMenu()" [(ngModel)]="switchOff" id="switch" type="checkbox" />
-              <label for="switch"></label>
             </div>
           </div>
-        </div>
+        </div>        
       </div>
+
     </div>    
   </div>
 </main>

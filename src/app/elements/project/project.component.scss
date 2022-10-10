@@ -86,10 +86,20 @@
     .project {
         width: 150px;
     }
+
+    .textGroup {
+      padding: 4px;
+    }
   }
 
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 600px) {
     .project {
-        width: 120px;
+        margin: 10px;
     }
   }  
+
+  @media only screen and (max-width: 550px) {
+    .project {
+        margin: 20px;
+    }
+  }

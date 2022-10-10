@@ -1,16 +1,22 @@
 :host {
+    display: flex;
     color: #000;
+}
+
+.pagegroup {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: left;
 }
 
 .welcome {
     display: flex;
+    margin-top: 20px;
     flex-direction: column;
     color: #000;
     font-size: 20px;
     flex: 1;
-    min-height: 200px;
-    align-items: center;
-    justify-content: center;
 }
 
 .columngroup {
@@ -37,39 +43,93 @@
     }
 }
 
-.aboutStart {
+.borderHeader {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1.7rem;
+    border: rgb(0, 18, 108) 4px solid;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 60%;
+}
+
+.linedown {
+    display: block;
+    margin: 0 auto;
+    width: 2px;
+    border: rgb(0, 18, 108) 4px solid;
+}
+
+.projectGroup {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    text-align: justify;
-    width: 90%;
+    flex: 1 1;
+    border-top: rgb(0, 18, 108) 4px solid;
+    border-bottom: rgb(0, 18, 108) 4px solid;
+    padding-bottom: 55px;
+}
+
+.projectline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+    position: relative;
+    top: 15px;
+    margin: 0 auto;
+    margin-top: 25px;
+    z-index: 5;
+}
+
+.textGroup {
     font-size: 26px;
+    padding: 5px;
 
-    .name {
+    .h1 {
         font-size: 55px;
+        margin-bottom: 2px;
         text-align: left;
-        font-family: 'VT323', monospace !important;
-    }
-
-    .fed {
-        font-size: 35px;
-        text-align: left;
+        font-family: 'VT323', monospace;
     }
 }
 
-.gotoNext {
+.contactBlock {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    width: 100%;
-    font-size: 24px;
     align-items: center;
-    justify-content: center;
-    .jumpTo {
-        border: rgb(0, 18, 108) 4px solid;
-        border-radius: 8px;
-        width: 90%;
+    margin-top: 15px;
+}
 
-        padding: 10px;
-        background: rgba(228, 228, 228, 0.862);
+.contact {
+    display: flex;
+    font-size: 1.6rem;
+    margin: 25px 0px;
+}
+
+.qmsg {
+    max-width: 75%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.cbtn {
+    cursor: pointer;
+    display: block;
+    font-size: 1.8rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 220px;
+    margin: 10px;
+    text-align: center;
+    background: rgb(229, 229, 229);
+    color: #000;
+    border: #000 solid 2px;
+
+    &:visited {
+        color: rgb(150, 150, 150);
     }
 }
 
@@ -92,6 +152,27 @@
     
 }
 
+@media only screen and (max-width: 680px) {
+    .columngroup {
+        flex-direction: column;
+
+        .group {
+            width: 100%;
+        }        
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .projectline {
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 100%;
+        position: relative;
+        margin-top: 5px;
+    }
+}
+
 @media only screen and (max-width: 420px) {
 
     .welcome {
@@ -101,23 +182,11 @@
     .aboutStart {
         font-size: 26px;
     
-        .name {
+        .h1 {
             font-size: 42px;
-        }
-    
-        .fed {
-            font-size: 25px;
         }
     }
     .gotoNext {
         font-size: 22px;
-    }
-
-    .columngroup {
-        flex-direction: column;
-
-        .group {
-            width: 100%;
-        }        
     }
 }
